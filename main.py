@@ -28,8 +28,8 @@ class Box:
             another_box.blue_ball += 1
 
 # The fun begins now:
-blue_box = Box(name='blue-box', red=0, blue=30)
-red_box = Box(name='red-box', red=30, blue=0)
+red_box = Box(name='red-box', red=10, blue=28)
+blue_box = Box(name='blue-box', red=13, blue=25)
 
 while True:
     blue_box.transfer_random(red_box)
@@ -40,12 +40,12 @@ while True:
         print (colored('o', 'blue'), end='')
     for _ in range(blue_box.red_ball):
         print(colored('o', 'red'), end='')
-    print(end='   |   ')
+    print(end='|')
 
-    for _ in range(red_box.blue_ball):
-        print(colored('o', 'red'), end='')
     for _ in range(red_box.red_ball):
-        print (colored('o', 'blue'), end='')
+        print (colored('o', 'red'), end='')
+    for _ in range(red_box.blue_ball):
+        print(colored('o', 'blue'), end='')
 
     print()
     print()
